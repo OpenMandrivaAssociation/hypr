@@ -34,7 +34,9 @@ Hypr is a dynamic tiling window manager for X
 %make_build
 
 %install
-%make_install -C build
+# There is no cmake install target, so let's install bin manually
+#make_install -C build
+install -D -m0755 build/Hypr %{buildroot}%{_bindir}/Hypr
 
 %files
 %license LICENSE
