@@ -27,7 +27,7 @@ Requires: xmodmap
 Hypr is a dynamic tiling window manager for X
 
 %prep
-%autosetup -p1
+%autosetup -n Hypr-%{version} -p1
 
 %build
 %cmake
