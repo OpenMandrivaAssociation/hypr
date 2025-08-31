@@ -1,0 +1,13 @@
+diff -up hypr-1.1.4/CMakeLists.txt.omv hypr-1.1.4/CMakeLists.txt
+--- hypr-1.1.4/CMakeLists.txt.omv	2025-08-31 13:07:14.095651472 -0400
++++ hypr-1.1.4/CMakeLists.txt	2025-08-31 13:08:49.266777255 -0400
+@@ -56,4 +56,6 @@ IF(CMAKE_BUILD_TYPE MATCHES Debug OR CMA
+     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pg -no-pie -fno-builtin")
+     SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pg -no-pie -fno-builtin")
+     SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -pg -no-pie -fno-builtin")
+-ENDIF(CMAKE_BUILD_TYPE MATCHES Debug OR CMAKE_BUILD_TYPE MATCHES DEBUG)
+\ No newline at end of file
++ENDIF(CMAKE_BUILD_TYPE MATCHES Debug OR CMAKE_BUILD_TYPE MATCHES DEBUG)
++
++install(TARGETS Hypr RUNTIME)
+\ No newline at end of file
