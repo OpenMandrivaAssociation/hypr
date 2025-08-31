@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Hypr
+Comment=Hypr is a tiling window manager written in modern C++.
+Exec=/usr/bin/Hypr
