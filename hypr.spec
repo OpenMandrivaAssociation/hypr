@@ -1,13 +1,12 @@
 #define git 20230823
 Name:           hypr
 Version:        1.1.4
-Release:        2
+Release:        3
 Summary:        Dynamic tiling window manager
 License:        BSD-3-Clause
 URL:            https://github.com/hyprwm/Hypr
 #Source0:        https://github.com/hyprwm/Hypr/archive/refs/heads/Hypr-main.tar.gz
 Source0:        https://github.com/hyprwm/Hypr/archive/%{version}/Hypr-%{version}.tar.gz
-Source1:       hypr.desktop
 
 Patch0:        fix-hypr-add-install.patch
 
@@ -31,7 +30,7 @@ Requires: xmodmap
 Hypr is a dynamic tiling window manager for X
 
 %install -p
-install -D -m0755 %{S:1} %{buildroot}%{_datadir}/xsessions/%name.desktop
+install -D -m0755 %{_builddir}/%name-%version/example/%name.desktop %{buildroot}%{_datadir}/xsessions/%name.desktop
 
 %files
 %license LICENSE
